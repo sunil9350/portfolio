@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 6%;
+    --foreground: 210 20% 90%;
+
+    --card: 222 40% 10%;
+    --card-foreground: 210 20% 90%;
+
+    --popover: 222 40% 10%;
+    --popover-foreground: 210 20% 90%;
+
+    --primary: 38 90% 55%;
+    --primary-foreground: 222 47% 6%;
+
+    --secondary: 222 30% 14%;
+    --secondary-foreground: 210 20% 80%;
+
+    --muted: 222 25% 12%;
+    --muted-foreground: 215 15% 50%;
+
+    --accent: 38 90% 55%;
+    --accent-foreground: 222 47% 6%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 222 20% 18%;
+    --input: 222 20% 18%;
+    --ring: 38 90% 55%;
+
+    --radius: 0.5rem;
+
+    --font-display: "Space Grotesk", sans-serif;
+    --font-mono: "JetBrains Mono", monospace;
+
+    --sidebar-background: 222 40% 8%;
+    --sidebar-foreground: 210 20% 90%;
+    --sidebar-primary: 38 90% 55%;
+    --sidebar-primary-foreground: 222 47% 6%;
+    --sidebar-accent: 222 30% 14%;
+    --sidebar-accent-foreground: 210 20% 90%;
+    --sidebar-border: 222 20% 18%;
+    --sidebar-ring: 38 90% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-display);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+  }
+
+  code,
+  pre,
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-amber-300;
+  }
+
+  .glow {
+    box-shadow:
+      0 0 20px hsl(38 90% 55% / 0.15),
+      0 0 60px hsl(38 90% 55% / 0.05);
+  }
+
+  .section-padding {
+    @apply py-24 md:py-32 px-6 md:px-12 lg:px-24;
+  }
+}
