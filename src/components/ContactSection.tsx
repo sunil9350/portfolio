@@ -41,9 +41,13 @@ const ContactSection = () => {
     }
 
     setLoading(true);
-    const { error } = await supabase
-      .from("contact_leads")
-      .insert({ name, email, message });
+    const { error } = await supabase.from("portfolio").insert({
+      id: crypto.randomUUID(),
+      created_at: new Date().toISOString(),
+      name,
+      email,
+      message,
+    });
     setLoading(false);
 
     if (error) {

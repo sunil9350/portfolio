@@ -14,7 +14,7 @@ export type Database = {
   }
   public: {
     Tables: {
-      contact_leads: {
+      portfolio: {
         Row: {
           created_at: string
           email: string
