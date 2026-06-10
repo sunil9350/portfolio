@@ -5,18 +5,42 @@ import { useRef } from "react";
 
 const skills = [
   {
-    category: "Languages",
-    items: ["TypeScript", "JavaScript", "Python", "Go", "Rust"],
-  },
-  {
     category: "Frontend",
-    items: ["React", "Next.js", "Tailwind CSS", "Vue.js", "GraphQL"],
+    items: [
+      "React.js",
+      "Next.js",
+      "TypeScript",
+      "JavaScript",
+      "HTML5 & CSS3",
+      "Tailwind CSS",
+      "Material UI",
+      "Shadcn UI",
+    ],
   },
   {
-    category: "Backend",
-    items: ["Node.js", "Express", "PostgreSQL", "Redis", "Docker"],
+    category: "Backend / CMS",
+    items: [
+      "PHP",
+      "MySQL",
+      "WordPress",
+      "Headless WordPress",
+      "REST APIs",
+    ],
   },
-  { category: "Tools", items: ["Git", "AWS", "CI/CD", "Kubernetes", "Figma"] },
+  {
+    category: "Tools",
+    items: ["Git & GitHub", "Postman", "GraphQL APIs", "Lighthouse", "Cursor", "n8n"],
+  },
+  {
+    category: "Concepts",
+    items: [
+      "Performance Optimization",
+      "Responsive Design",
+      "SSR & CSR",
+      "SEO",
+      "Reusable Components",
+    ],
+  },
 ];
 
 const SkillsSection = () => {

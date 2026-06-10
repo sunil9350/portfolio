@@ -6,34 +6,34 @@ import { ExternalLink, Github, Folder } from "lucide-react";
 
 const projects = [
   {
-    title: "Cloud Dashboard",
+    title: "ELIVAAS Booking Platform",
     description:
-      "Real-time infrastructure monitoring platform with live metrics, alerting, and team collaboration features.",
-    tech: ["React", "TypeScript", "Go", "PostgreSQL"],
+      "Property detail pages, booking flows, sliders, and responsive UI systems optimized for SEO and performance across ELIVAAS and AlyaStays.",
+    tech: ["React.js", "Next.js", "TypeScript", "Tailwind CSS"],
     github: "#",
     live: "#",
   },
   {
-    title: "DevFlow CLI",
+    title: "CRS — Agent Portal",
     description:
-      "Developer productivity CLI tool that automates git workflows, code reviews, and deployment pipelines.",
-    tech: ["Rust", "Shell", "GitHub API"],
+      "Booking dashboards, filters, dynamic forms, and operational workflows for internal teams managing bookings and guest operations.",
+    tech: ["React.js", "Next.js", "Material UI", "REST APIs"],
     github: "#",
     live: "#",
   },
   {
-    title: "Neural Search",
+    title: "Headless CMS Blog",
     description:
-      "AI-powered semantic search engine for documentation with vector embeddings and natural language queries.",
-    tech: ["Python", "FastAPI", "React", "Pinecone"],
+      "WordPress backend integrated with a Next.js frontend for fast, SEO-friendly blog delivery using a headless CMS architecture.",
+    tech: ["Next.js", "Headless WordPress", "PHP", "GraphQL"],
     github: "#",
     live: "#",
   },
   {
-    title: "PaySync API",
+    title: "Transactional Email System",
     description:
-      "Payment orchestration microservice handling multi-provider transactions with automatic failover.",
-    tech: ["Node.js", "Stripe", "Redis", "Docker"],
+      "Dynamic transactional email system built with Thymeleaf featuring conditional rendering and refund workflows.",
+    tech: ["Thymeleaf", "HTML", "CSS", "REST APIs"],
     github: "#",
     live: "#",
   },

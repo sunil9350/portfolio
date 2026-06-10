@@ -8,7 +8,7 @@ const links = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
-  { label: "Blog", href: "#blog" },
+  { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -24,7 +24,7 @@ const Navbar = () => {
     >
       <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
         <a href="#" className="font-mono text-primary font-bold text-lg">
-          {"<dev />"}
+          {"<sunil />"}
         </a>
 
         <div className="hidden md:flex items-center gap-8">

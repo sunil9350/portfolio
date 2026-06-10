@@ -3,19 +3,18 @@ import { Providers } from "./providers";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Lovable App",
-  description: "Lovable Generated Project",
-  authors: [{ name: "Lovable" }],
+  title: "Sunil Vishwakarma — Software Developer",
+  description:
+    "Frontend-focused Software Developer with 5+ years of experience building scalable, high-performance web applications with React.js, Next.js, and modern UI frameworks.",
+  authors: [{ name: "Sunil Vishwakarma" }],
   openGraph: {
-    title: "Lovable App",
-    description: "Lovable Generated Project",
+    title: "Sunil Vishwakarma — Software Developer",
+    description:
+      "Frontend-focused Software Developer with 5+ years of experience building scalable, high-performance web applications with React.js, Next.js, and modern UI frameworks.",
     type: "website",
-    images: ["https://lovable.dev/opengraph-image-p98pqg.png"],
   },
   twitter: {
     card: "summary_large_image",
-    site: "@Lovable",
-    images: ["https://lovable.dev/opengraph-image-p98pqg.png"],
   },
 };
 

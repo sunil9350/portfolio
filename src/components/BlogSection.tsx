@@ -2,35 +2,50 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Calendar, Clock, ArrowUpRight } from "lucide-react";
+import { Briefcase, Calendar } from "lucide-react";
 
-const blogPosts = [
+const experience = [
   {
-    title: "Building Scalable APIs with Go and PostgreSQL",
-    excerpt:
-      "A deep dive into designing RESTful APIs that handle millions of requests with clean architecture patterns and efficient database queries.",
-    date: "Mar 15, 2026",
-    readTime: "8 min read",
-    tags: ["Go", "PostgreSQL", "API Design"],
-    slug: "#",
+    role: "Software Development Engineer",
+    company: "ELIVAAS",
+    period: "Jan 2024 — Present",
+    points: [
+      "Developed scalable booking platform features using React.js and Next.js for ELIVAAS and AlyaStays.",
+      "Built and optimized CRS (Agent Portal) workflows for booking and guest management operations.",
+      "Developed reusable UI components using Material UI and Shadcn UI.",
+      "Improved Lighthouse scores and SEO through lazy loading, code splitting, and rendering optimizations.",
+      "Implemented booking flows, payment integrations, dynamic APIs, and responsive mobile-first interfaces.",
+      "Built headless WordPress blog architecture integrated with a Next.js frontend.",
+    ],
   },
   {
-    title: "Why I Switched from REST to GraphQL (and Back)",
-    excerpt:
-      "My journey experimenting with GraphQL in production, the trade-offs I discovered, and when each approach truly shines.",
-    date: "Feb 28, 2026",
-    readTime: "6 min read",
-    tags: ["GraphQL", "REST", "Architecture"],
-    slug: "#",
+    role: "Associate Consultant — Development",
+    company: "Oodles Technologies",
+    period: "Oct 2021 — Dec 2023",
+    points: [
+      "Developed ERP and business management platforms using WordPress, PHP, MySQL, JavaScript, HTML, and CSS.",
+      "Built custom themes, plugins, dashboards, dynamic forms, and workflow-based admin systems.",
+      "Integrated third-party APIs including Google Calendar and contact systems.",
+      "Improved performance, responsiveness, and SEO optimization for client platforms.",
+    ],
   },
   {
-    title: "The Art of Writing Clean TypeScript",
-    excerpt:
-      "Practical patterns for writing type-safe, readable TypeScript that your future self and teammates will thank you for.",
-    date: "Jan 20, 2026",
-    readTime: "10 min read",
-    tags: ["TypeScript", "Clean Code", "Best Practices"],
-    slug: "#",
+    role: "Web Designer",
+    company: "Technians SofTech Pvt. Ltd.",
+    period: "Jan 2020 — Aug 2021",
+    points: [
+      "Developed responsive websites and landing pages for enterprise and healthcare clients.",
+      "Worked on frontend implementation for ananda.in and maxhospitalindia.com.",
+      "Built responsive email templates and pixel-perfect UI sections.",
+    ],
+  },
+  {
+    role: "Web Designer",
+    company: "Rakun InfoTech Pvt. Ltd.",
+    period: "Jan 2019 — May 2019",
+    points: [
+      "Developed responsive templates and landing pages using HTML, CSS, JavaScript, and Bootstrap.",
+    ],
   },
 ];
 
@@ -39,7 +54,7 @@ const BlogSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="blog" className="section-padding bg-secondary/30" ref={ref}>
+    <section id="experience" className="section-padding bg-secondary/30" ref={ref}>
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -48,53 +63,48 @@ const BlogSection = () => {
         >
           <p className="font-mono text-primary text-sm mb-2">04.</p>
           <h2 className="text-3xl md:text-4xl font-bold font-display mb-12">
-            Blog & Insights
+            Experience
           </h2>
         </motion.div>
 
         <div className="space-y-6">
-          {blogPosts.map((post, i) => (
-            <motion.a
-              key={post.title}
-              href={post.slug}
+          {experience.map((job, i) => (
+            <motion.div
+              key={`${job.company}-${job.period}`}
               initial={{ opacity: 0, y: 25 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 * i }}
-              className="group block bg-card border border-border rounded-lg p-6 hover:border-primary/40 transition-all duration-300 hover:-translate-y-0.5"
+              className="bg-card border border-border rounded-lg p-6"
             >
-              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
-                <div className="flex-1">
-                  <h3 className="text-lg font-semibold font-display text-foreground group-hover:text-primary transition-colors mb-2 flex items-center gap-2">
-                    {post.title}
-                    <ArrowUpRight
-                      size={16}
-                      className="opacity-0 group-hover:opacity-100 transition-opacity"
-                    />
-                  </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                    {post.excerpt}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {post.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="font-mono text-xs text-muted-foreground bg-muted px-2 py-1 rounded"
-                      >
-                        {tag}
-                      </span>
-                    ))}
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-4">
+                <div className="flex items-start gap-3">
+                  <Briefcase className="text-primary mt-1 shrink-0" size={20} />
+                  <div>
+                    <h3 className="text-lg font-semibold font-display text-foreground">
+                      {job.role}
+                    </h3>
+                    <p className="text-primary text-sm font-mono">
+                      {job.company}
+                    </p>
                   </div>
                 </div>
-                <div className="flex md:flex-col items-center md:items-end gap-3 md:gap-1 text-xs text-muted-foreground font-mono shrink-0">
-                  <span className="flex items-center gap-1">
-                    <Calendar size={12} /> {post.date}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Clock size={12} /> {post.readTime}
-                  </span>
-                </div>
+                <span className="flex items-center gap-1 text-xs text-muted-foreground font-mono shrink-0 md:pt-1">
+                  <Calendar size={12} /> {job.period}
+                </span>
               </div>
-            </motion.a>
+
+              <ul className="space-y-2">
+                {job.points.map((point) => (
+                  <li
+                    key={point}
+                    className="text-muted-foreground text-sm leading-relaxed flex gap-2"
+                  >
+                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary/60 shrink-0" />
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
           ))}
         </div>
       </div>

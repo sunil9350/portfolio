@@ -4,6 +4,8 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import {
   Mail,
+  Phone,
+  MapPin,
   Github,
   Linkedin,
   ArrowUpRight,
@@ -41,22 +43,29 @@ const ContactSection = () => {
     }
 
     setLoading(true);
-    const { error } = await supabase.from("portfolio").insert({
-      id: crypto.randomUUID(),
-      created_at: new Date().toISOString(),
-      name,
-      email,
-      message,
-    });
-    setLoading(false);
+    try {
+      const { error } = await supabase.from("portfolio").insert({
+        id: crypto.randomUUID(),
+        created_at: new Date().toISOString(),
+        name,
+        email,
+        message,
+      });
 
-    if (error) {
+      if (error) {
+        console.error("Contact form insert failed:", error);
+        toast.error("Something went wrong. Please try again.");
+        return;
+      }
+
+      setSubmitted(true);
+      toast.success("Message sent! I'll get back to you soon.");
+    } catch (err) {
+      console.error("Contact form error:", err);
       toast.error("Something went wrong. Please try again.");
-      return;
+    } finally {
+      setLoading(false);
     }
-
-    setSubmitted(true);
-    toast.success("Message sent! I'll get back to you soon.");
   };
 
   return (
@@ -196,11 +205,31 @@ const ContactSection = () => {
                 Direct Email
               </h3>
               <a
-                href="mailto:hello@example.com"
+                href="mailto:connect2sunil128@gmail.com"
                 className="inline-flex items-center gap-2 text-foreground hover:text-primary transition-colors"
               >
-                <Mail size={16} /> hello@example.com <ArrowUpRight size={14} />
+                <Mail size={16} /> connect2sunil128@gmail.com{" "}
+                <ArrowUpRight size={14} />
               </a>
+            </div>
+            <div>
+              <h3 className="font-mono text-primary text-sm font-semibold mb-3">
+                Phone
+              </h3>
+              <a
+                href="tel:+919350310876"
+                className="inline-flex items-center gap-2 text-foreground hover:text-primary transition-colors"
+              >
+                <Phone size={16} /> +91 93503 10876
+              </a>
+            </div>
+            <div>
+              <h3 className="font-mono text-primary text-sm font-semibold mb-3">
+                Location
+              </h3>
+              <p className="inline-flex items-center gap-2 text-muted-foreground text-sm">
+                <MapPin size={16} /> Delhi, India
+              </p>
             </div>
             <div>
               <h3 className="font-mono text-primary text-sm font-semibold mb-3">

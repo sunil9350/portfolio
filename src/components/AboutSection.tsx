@@ -30,22 +30,46 @@ const AboutSection = () => {
             className="space-y-4 text-muted-foreground leading-relaxed"
           >
             <p>
-              I'm a software engineer with a passion for building elegant,
-              performant, and scalable applications. With several years of
-              experience in full-stack development, I enjoy turning complex
-              problems into simple, beautiful solutions.
+              I'm a frontend-focused Software Developer with 5+ years of
+              experience building scalable, high-performance web applications
+              using React.js, Next.js, WordPress, PHP, and modern UI frameworks.
             </p>
             <p>
-              I've had the privilege of working across startups and established
-              companies, building everything from real-time dashboards to
-              distributed microservices. My focus is always on writing clean,
-              maintainable code that stands the test of time.
+              At ELIVAAS I build booking platform features, CRS agent-portal
+              workflows, and reusable UI systems with Material UI and Shadcn UI —
+              improving Lighthouse scores and SEO through lazy loading, code
+              splitting, and rendering optimizations. I've also built headless
+              WordPress architectures integrated with a Next.js frontend for fast,
+              SEO-friendly delivery.
             </p>
             <p>
-              When I'm not coding, you'll find me exploring new technologies,
-              contributing to open source, or sharing knowledge through
-              technical writing and mentoring.
+              I care about clean, maintainable code, responsive mobile-first
+              interfaces, and end-to-end feature ownership — turning complex
+              problems into simple, performant solutions.
             </p>
+
+            <div className="pt-2">
+              <h3 className="font-mono text-primary text-sm font-semibold mb-3">
+                Key Strengths
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "Performance Optimization",
+                  "Responsive UI Development",
+                  "Reusable Component Architecture",
+                  "SEO Optimization",
+                  "Problem Solving",
+                  "End-to-End Feature Ownership",
+                ].map((strength) => (
+                  <span
+                    key={strength}
+                    className="font-mono text-xs text-muted-foreground bg-muted px-2 py-1 rounded"
+                  >
+                    {strength}
+                  </span>
+                ))}
+              </div>
+            </div>
           </motion.div>
 
           <motion.div

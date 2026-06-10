@@ -35,8 +35,8 @@ const HeroSection = () => {
           transition={{ delay: 0.4, duration: 0.6 }}
           className="text-5xl md:text-7xl lg:text-8xl font-bold font-display tracking-tight mb-4"
         >
-          <span className="text-foreground">John </span>
-          <span className="text-gradient">Doe</span>
+          <span className="text-foreground">Sunil </span>
+          <span className="text-gradient">Vishwakarma</span>
         </motion.h1>
 
         <motion.h2
@@ -45,7 +45,7 @@ const HeroSection = () => {
           transition={{ delay: 0.6, duration: 0.6 }}
           className="text-2xl md:text-4xl font-display font-light text-muted-foreground mb-8"
         >
-          Software Engineer
+          Software Developer
         </motion.h2>
 
         <motion.p
@@ -54,9 +54,10 @@ const HeroSection = () => {
           transition={{ delay: 0.8 }}
           className="text-muted-foreground max-w-xl mx-auto mb-10 leading-relaxed"
         >
-          I build exceptional digital experiences with clean code and modern
-          technologies. Passionate about creating impactful software that makes
-          a difference.
+          Frontend-focused developer with 5+ years building scalable,
+          high-performance web applications with React.js, Next.js, and modern
+          UI frameworks — from booking platforms to headless CMS architectures.
+          Based in Delhi, India.
         </motion.p>
 
         <motion.div
@@ -89,7 +90,7 @@ const HeroSection = () => {
               <Linkedin size={22} />
             </a>
             <a
-              href="mailto:hello@example.com"
+              href="mailto:connect2sunil128@gmail.com"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
               <Mail size={22} />
