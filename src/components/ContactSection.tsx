@@ -237,7 +237,7 @@ const ContactSection = () => {
               </h3>
               <div className="flex gap-4">
                 <a
-                  href="https://github.com"
+                  href="https://github.com/sunil9350/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors text-sm"
@@ -245,7 +245,7 @@ const ContactSection = () => {
                   <Github size={18} /> GitHub
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/sunil-vishwakarma-b723341ba/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors text-sm"
